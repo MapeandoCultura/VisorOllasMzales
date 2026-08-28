@@ -144,11 +144,7 @@
         function pop_OLLAS_MANIZALESBarriosMunicipiodeManizales_1(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">BARRIOS</th>\
-                        <td class="visible-with-data" id="BARRIOS">' + (feature.properties['BARRIOS'] !== null ? autolinker.link(String(feature.properties['BARRIOS']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['INSPECCIÓN'] !== null ? autolinker.link(String(feature.properties['INSPECCIÓN']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['BARRIOS'] !== null ? autolinker.link(String(feature.properties['BARRIOS']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
@@ -162,7 +158,7 @@
             return {
                 pane: 'pane_OLLAS_MANIZALESBarriosMunicipiodeManizales_1',
                 opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
+                color: 'rgba(4,1,5,1.0)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
@@ -191,7 +187,8 @@
                         <td class="visible-with-data" id="OLLA" colspan="2"><strong>OLLA</strong><br />' + (feature.properties['OLLA'] !== null ? autolinker.link(String(feature.properties['OLLA']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['UBICACIÓN'] !== null ? autolinker.link(String(feature.properties['UBICACIÓN']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <th scope="row">UBICACIÓN</th>\
+                        <td class="visible-with-data" id="UBICACIÓN">' + (feature.properties['UBICACIÓN'] !== null ? autolinker.link(String(feature.properties['UBICACIÓN']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">EDAD</th>\
@@ -203,7 +200,7 @@
                     </tr>\
                     <tr>\
                         <th scope="row">BARRIO</th>\
-                        <td>' + (feature.properties['BARRIO'] !== null ? autolinker.link(String(feature.properties['BARRIO']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td class="visible-with-data" id="BARRIO">' + (feature.properties['BARRIO'] !== null ? autolinker.link(String(feature.properties['BARRIO']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">TIPO_LOCAL</th>\
@@ -343,25 +340,12 @@
         });       
         setBounds();
         var i = 0;
-        layer_OLLAS_MANIZALESBarriosMunicipiodeManizales_1.eachLayer(function(layer) {
-            var context = {
-                feature: layer.feature,
-                variables: {}
-            };
-            layer.bindTooltip((layer.feature.properties['BARRIOS'] !== null?String('<div style="color: #d44b4b; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['BARRIOS']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_OLLAS_MANIZALESBarriosMunicipiodeManizales_1'});
-            labels.push(layer);
-            totalMarkers += 1;
-              layer.added = true;
-              addLabel(layer, i);
-              i++;
-        });
-        var i = 0;
         layer_OLLAS_MANIZALESUBICACIONESOLLAS_2.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['OLLA'] !== null?String('<div style="color: #000377; font-size: 8pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['OLLA']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_OLLAS_MANIZALESUBICACIONESOLLAS_2'});
+            layer.bindTooltip((layer.feature.properties['OLLA'] !== null?String('<div style="color: #040105; font-size: 11pt; font-weight: bold; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['OLLA']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_OLLAS_MANIZALESUBICACIONESOLLAS_2'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
