@@ -73,15 +73,32 @@
       border-color: #e67e22;
       transform: translateY(-2px);
     }
-    .btn-primary {
-      background: linear-gradient(135deg, #d35400, #e67e22);
-      border: none;
-    }
-    .btn-primary:active, .btn-primary:hover {
-      background: linear-gradient(135deg, #e67e22, #f39c12);
-    }
     .icon {
       font-size: 20px;
+    }
+    .info-card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid #2a2a2a;
+      border-radius: 12px;
+      padding: 12px 16px;
+      font-size: 13px;
+      color: #b0b0b0;
+      margin-top: -4px;
+    }
+    .info-card summary {
+      font-weight: 600;
+      color: #e67e22;
+      cursor: pointer;
+      outline: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .info-card ol {
+      margin-top: 10px;
+      padding-left: 20px;
+      line-height: 1.6;
+      color: #d0d0d0;
     }
     .footer {
       margin-top: auto;
@@ -102,18 +119,29 @@
 
   <div class="links-container">
     <!-- Botón 1: Geoportal Web Interactivo -->
-    <a href="https://mapeandocultura.github.io/VisorOllasMzales/#13/5.0635/-75.4868" class="btn-link btn-primary">
+    <a href="https://mapeandocultura.github.io/VisorOllasMzales/#13/5.0635/-75.4868" class="btn-link">
       <span class="icon">🌐</span>
       <span>Abrir Geoportal Web Interactivo</span>
     </a>
 
-    <!-- Botón 2: Google Maps con vista móvil corregida -->
+    <!-- Botón 2: Google Maps -->
     <a href="https://www.google.com/maps/d/viewer?mid=1bv2XAmTkNgsRz19MhGkUew52ZLajt3k&usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-link">
       <span class="icon">📍</span>
       <span>Ver en Google Maps</span>
     </a>
 
-    <!-- Botón 3: Perfil de Instagram -->
+    <!-- Tarjeta desplegable con instrucciones para la app -->
+    <details class="info-card">
+      <summary>📲 ¿Cómo activarlo en tu app de Google Maps?</summary>
+      <ol>
+        <li>Toca el botón <strong>«Ver en Google Maps»</strong> arriba para vincularlo a tu cuenta.</li>
+        <li>Abre la aplicación <strong>Google Maps</strong> en tu celular.</li>
+        <li>Ve a la pestaña <strong>Guardados</strong> (o <em>Tú</em>) &rarr; sección <strong>Mapas</strong>.</li>
+        <li>Selecciona <strong>Ollas de Manizales</strong> para activar los puntos y la ruta con GPS.</li>
+      </ol>
+    </details>
+
+    <!-- Botón 3: Instagram -->
     <a href="https://www.instagram.com/mapeandocultura?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="btn-link">
       <span class="icon">📸</span>
       <span>Síguenos en Instagram</span>
