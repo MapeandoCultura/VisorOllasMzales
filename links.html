@@ -100,12 +100,22 @@
       <span>Abrir Geoportal Web Interactivo</span>
     </a>
 
-    <!-- Botón 2: Google Maps -->
-    <a href="https://www.google.com/maps/d/viewer?mid=1bv2XAmTkNgsRz19MhGkUew52ZLajt3k&usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-link">
-      <span class="icon">📍</span>
-      <span>Ver en Google Maps</span>
-    </a>
+<!-- Botón 2: Google Maps forzando navegador externo en móviles -->
+<a href="intent://www.google.com/maps/d/viewer?mid=1bv2XAmTkNgsRz19MhGkUew52ZLajt3k&usp=sharing#Intent;scheme=https;package=com.android.chrome;end" 
+   target="_blank" 
+   rel="noopener noreferrer" 
+   class="btn-link" 
+   id="btn-gmaps">
+  <span class="icon">📍</span>
+  <span>Ver en Google Maps</span>
+</a>
 
+    <div style="background: rgba(230, 126, 34, 0.1); border: 1px solid rgba(230, 126, 34, 0.3); border-radius: 10px; padding: 12px; margin-top: 5px; font-size: 13px; color: #d0d0d0; line-height: 1.4; text-align: left;">
+  💡 <strong>¿No te carga el mapa en la app?</strong><br>
+  Toca los <strong>tres puntos (⋮)</strong> en la esquina superior derecha de tu pantalla y selecciona <em>«Abrir en el navegador»</em> o <em>«Abrir en Chrome / Safari»</em>.
+</div>
+
+    
     <!-- Botón 3: Instagram -->
     <a href="https://www.instagram.com/mapeandocultura?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="btn-link">
       <span class="icon">📸</span>
@@ -116,6 +126,15 @@
   <div class="footer">
     <p>Manizales, Caldas · Colombia</p>
   </div>
+<script>
+  const btnGmaps = document.getElementById('btn-gmaps');
+  const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+  const urlReal = "https://www.google.com/maps/d/viewer?mid=1bv2XAmTkNgsRz19MhGkUew52ZLajt3k&usp=sharing";
 
+  // Si es iOS (iPhone), usa el enlace directo en una pestaña nueva limpia
+  if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+    btnGmaps.href = urlReal;
+  }
+</script>
 </body>
 </html>
