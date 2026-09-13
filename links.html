@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapeando Cultura | Ollas de Manizales</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    body {
+      background-color: #121212;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+    .profile-header {
+      text-align: center;
+      max-width: 450px;
+      margin-bottom: 30px;
+    }
+    .profile-logo {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 16px auto;
+      display: block;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+      border: 2px solid #333333;
+    }
+    h1 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    p {
+      font-size: 14px;
+      color: #a0a0a0;
+      line-height: 1.4;
+    }
+    .links-container {
+      width: 100%;
+      max-width: 420px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .btn-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background-color: #1e1e1e;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 16px 20px;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 600;
+      border: 1px solid #333333;
+      transition: all 0.2s ease-in-out;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+    .btn-link:active, .btn-link:hover {
+      background-color: #e67e22;
+      border-color: #e67e22;
+      transform: translateY(-2px);
+    }
+    .icon {
+      font-size: 20px;
+    }
+    .footer {
+      margin-top: auto;
+      padding-top: 40px;
+      text-align: center;
+      font-size: 12px;
+      color: #666666;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="profile-header">
+    <img src="IMGS/Logo_MapCul_negro.jpeg" alt="Logo Mapeando Cultura" class="profile-logo">
+    <h1>Mapeando Cultura</h1>
+    <p>Red y Cartografía de las Ollas Tradicionales de Manizales · Estímulos 2026</p>
+  </div>
+
+  <div class="links-container">
+    <!-- Botón 1: Geoportal Web Interactivo -->
+    <a href="https://mapeandocultura.github.io/VisorOllasMzales/#13/5.0635/-75.4868" class="btn-link">
+      <span class="icon">🌐</span>
+      <span>Abrir Geoportal Web Interactivo</span>
+    </a>
+
+    <!-- Botón 2: Google Maps -->
+    <a href="https://www.google.com/maps/d/viewer?mid=1bv2XAmTkNgsRz19MhGkUew52ZLajt3k&usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-link">
+      <span class="icon">📍</span>
+      <span>Ver en Google Maps</span>
+    </a>
+
+    <!-- Botón 3: Instagram -->
+    <a href="https://www.instagram.com/mapeandocultura?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="btn-link">
+      <span class="icon">📸</span>
+      <span>Síguenos en Instagram</span>
+    </a>
+  </div>
+
+  <div class="footer">
+    <p>Manizales, Caldas · Colombia</p>
+  </div>
+
+</body>
+</html>
